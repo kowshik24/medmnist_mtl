@@ -1,0 +1,30 @@
+data:
+  root_dir: "./data"
+  tasks: ["pathmnist", "organmnist", "bloodmnist"]
+  batch_size: 32
+  num_workers: 4
+  val_split: 0.2
+
+model:
+  backbone: "resnet18"
+  pretrained: true
+  feature_dim: 512
+  task_specific_layers: 2
+
+training:
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  task_weights:
+    pathmnist: 1.0
+    organmnist: 1.0
+    bloodmnist: 1.0
+  scheduler:
+    type: "cosine"
+    T_max: 100
+    eta_min: 0.00001
+
+paths:
+  checkpoints: "./checkpoints"
+  logs: "./logs"
+  results: "./results"
