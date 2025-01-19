@@ -72,3 +72,17 @@ Additional features that could be added:
 4. Uncertainty estimation
 5. Model interpretability tools
 
+Train on 100 epochs with batch size of 32:
+bloodmnist Summary:
+Overall Accuracy: 94.91%
+
+Per-class Accuracy:
+Class 0: 88.93%
+Class 1: 98.72%
+Class 2: 96.14%
+Class 3: 89.29%
+Class 4: 94.24%
+Class 5: 89.44%
+Class 6: 96.85%
+Class 7: 100.00%
+
