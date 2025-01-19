@@ -1,7 +1,7 @@
 data:
   root_dir: "./data"
   tasks: ["pathmnist", "organmnist", "bloodmnist"]
-  batch_size: 32
+  batch_size: 128
   num_workers: 4
   val_split: 0.2
 
@@ -12,7 +12,7 @@ model:
   task_specific_layers: 2
 
 training:
-  epochs: 100
+  epochs: 10
   learning_rate: 0.001
   weight_decay: 0.0001
   task_weights:
@@ -21,7 +21,7 @@ training:
     bloodmnist: 1.0
   scheduler:
     type: "cosine"
-    T_max: 100
+    T_max: 10
     eta_min: 0.00001
 
 paths:
